@@ -1,0 +1,2 @@
+[Fri Oct 04 21:06:15.430890 2019] [php7:error] [pid 2776:tid 1788] [client 127.0.0.1:54068] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\xampp\\htdocs\\waglerappnew\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DetectsLostConnections.php on line 8
+[Fri Oct 04 21:06:15.430890 2019] [php7:error] [pid 2776:tid 1768] [client 127.0.0.1:54067] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\xampp\\htdocs\\waglerappnew\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DetectsLostConnections.php on line 8
