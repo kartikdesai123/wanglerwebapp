@@ -105,12 +105,13 @@ class StoresController extends Controller {
                 break;
 
             case 'editseller':
-				$objCity = new ManageCity();
-				$data['getCityLists'] = $objCity->getcity();
+                $objCity = new ManageCity();
+                $data['getCityLists'] = $objCity->getcity();
 				
                 $objSeller = new StoreSeller();
-                $data['viewseller'] = $objSeller->viewseller($request->input('id'));
+                $data['viewseller'] = $objSeller->getseller($request->input('id'))[0];
                 $result = view('backend.pages.stores.editseller', $data);
+                
                 echo $result;
                 break;
 
