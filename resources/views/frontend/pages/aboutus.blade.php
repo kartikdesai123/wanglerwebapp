@@ -1,6 +1,7 @@
 @extends('frontend.layout.app')
 @section('content')
-<div class="banner"> <img src="{{ url("public/frontend/assets/images/about-bg.png") }}" alt=""> 
+<div class="banner"> 
+    <img src="{{ url("public/frontend/assets/images/about-bg.png") }}" alt="" width="100%"> 
                           <div class="about-head">
         <div class="container">
             <div class="row">
