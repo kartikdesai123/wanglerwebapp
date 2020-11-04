@@ -24,8 +24,16 @@ class StoreSeller extends Model {
         $query = StoreSeller::from('storeseller')
                 ->where('city_id', $id)
                 ->select('sellername', 'id' ,'city_id','selleraddress','sellerphoneno')
-                ->get();
-        return $query[0];
+                ->get()->toArray();
+        return $query;
+    }
+    
+    public function getseller($id) {
+        $query = StoreSeller::from('storeseller')
+                ->where('id', $id)
+                ->select('sellername', 'id' ,'city_id','selleraddress','sellerphoneno')
+                ->get()->toArray();
+        return $query;
     }
 
 	public function viewAllSeller() {

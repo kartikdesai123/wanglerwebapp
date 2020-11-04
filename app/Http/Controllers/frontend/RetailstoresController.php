@@ -31,13 +31,19 @@ class RetailstoresController extends Controller
     }
     
     public function ajaxAction(Request $request){
-        
+       
         $action = $request->input('action');
         switch($action){
             
-            case 'getstore':
+            case 'getseller':
                 $objStore = new StoreSeller();
-                $result = $objStore->viewseller($request->input('id'));
+                $result = $objStore->getseller($request->input('id'));
+                return json_encode($result);
+                break;
+            
+            case 'getstore':
+                $objSeller = new StoreSeller();
+                $result = $objSeller->viewseller($request->input('id'));
                 return json_encode($result);
                 break;
         }
