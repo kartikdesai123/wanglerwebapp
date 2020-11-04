@@ -73,7 +73,7 @@ var Manageproduct = function () {
                     url: baseurl + "manageproduct-ajaxAction",
                     data: {'action': 'editproduct', 'id': id},
                     success: function(data) {
-                       alert();
+                       
                         $(".editdiv").html(data);
                         var form = $('#editproductform');
                         var rules = {
