@@ -67,6 +67,7 @@
                     <h1 style="color:#a72330;">News & Announcements</h1>
                 </div>
                 <div class="announce-main">
+                    @if(!$announcement->isEmpty())
                      @foreach($announcement as $value)
                     <div class="product1 post7">
                         <figure class="p-img" ><img src="{{ url('public/images/news/'.$value->image) }}"  alt=""/></figure>
@@ -75,6 +76,14 @@
                         <p class="click"><img src="{{ url('public/frontend/assets/images/small-leaf.png') }}" alt="" /><a href="{{ route('newsdetails',$value->id) }}">Click Here For More</a></p>
                     </div>
                     @endforeach
+                    @else
+                    <h2>No news found</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    @endif
                     <br/>
                     <br/>
                     <br/>
