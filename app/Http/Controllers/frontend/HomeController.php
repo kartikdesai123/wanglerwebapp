@@ -9,6 +9,7 @@ use App\Model\Product;
 use App\Model\News;
 use App\Model\Pages;
 use App\Model\Users;
+use App\Model\StoreHours;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
 		return $getdetails[0];
 		
 	}
+        
+	 public static function getRecords(){
+            $query = StoreHours::get();
+            return $query[0];
+        }
     public function index(){
         
         $objslider = new Silder();

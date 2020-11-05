@@ -85,6 +85,10 @@ Route::group(['prefix' => $adminPrefix, 'middleware' => ['admin']], function() {
     Route::match(['get', 'post'], 'editcity', ['as' => 'editcity', 'uses' => 'backend\stores\StoresController@editcity']);
     Route::match(['get', 'post'], 'city-ajaxAction', ['as' => 'city-ajaxAction', 'uses' => 'backend\stores\StoresController@ajaxaction']);
 
+//  Hours
+    
+    Route::match(['get', 'post'], 'manage-store-hours', ['as' => 'manage-store-hours', 'uses' => 'backend\stores\StoresController@storeHours']);
+
     Route::match(['get', 'post'], 'stores', ['as' => 'stores', 'uses' => 'backend\stores\StoresController@stores']);
     Route::match(['get', 'post'], 'editseller', ['as' => 'editseller', 'uses' => 'backend\stores\StoresController@editseller']);
 
@@ -97,4 +101,5 @@ Route::group(['prefix' => $adminPrefix, 'middleware' => ['admin']], function() {
 //    video
     Route::match(['get', 'post'], 'admin-video', ['as' => 'admin-video', 'uses' => 'backend\video\VideoController@index']);
     Route::match(['get', 'post'], 'video-ajaxAction', ['as' => 'video-ajaxAction', 'uses' => 'backend\video\VideoController@ajaxAction']);
+    
 });

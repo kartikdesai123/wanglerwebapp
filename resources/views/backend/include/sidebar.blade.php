@@ -81,6 +81,7 @@ $session = Session::all();
                     <ul class="pcoded-submenu">
                         <li><a href="{{ route("manage-city")}}">Manage City</a></li>
                         <li><a href="{{ route("stores")}}">Stores</a></li>
+                        <li><a href="{{ route("manage-store-hours")}}">Stores Hours</a></li>
                     </ul>
                 </li>
 

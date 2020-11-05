@@ -5,7 +5,6 @@ use App\Http\Controllers\frontend\HomeController;
 $header = HomeController::getcolor()->headercolor;
 $footer = HomeController::getcolor()->footercolor;
 
-
 @endphp
 <script>
         var footer = "{{ $footer }}";

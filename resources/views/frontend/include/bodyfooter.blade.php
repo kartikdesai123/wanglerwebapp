@@ -1,3 +1,10 @@
+@php
+$currentRoute = Route::current()->getName();
+use App\Http\Controllers\frontend\HomeController;
+
+$storetime = HomeController::getRecords()->hours;
+
+@endphp
 <footer id="footer" class="post7" >
   <div class="container">
     <div class="row">
@@ -20,8 +27,10 @@
 		   <div class="col-md-4">
           <div class="f-txt">
             <p><strong>Store Hours:</strong><br/>
-              Monday-Friday 9:00am - 5:00pm<br/>
-              Saturday 8:00am - 4:00pm</p>
+<!--              Monday-Friday 9:00am - 5:00pm<br/>
+              Saturday 8:00am - 4:00pm-->
+              {{ $storetime }}
+            </p>
           </div>
             </div>
 		   <div class="col-md-3">

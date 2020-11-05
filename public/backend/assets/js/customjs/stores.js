@@ -80,6 +80,7 @@ var Stores = function () {
             });
         });
     }
+    
     var storeslist = function () {
 
         var form = $('#addseller');
@@ -159,7 +160,16 @@ var Stores = function () {
         });
     }
 
-
+    var managestorehours = function (){
+         var form = $('#storehours');
+        var rules = {
+            store_hours: {required: true}
+        };
+        handleFormValidate(form, rules, function (form) {
+            handleAjaxFormSubmit(form);
+        });
+    }
+    
     return {
         managecity: function () {
             managecitylist();
@@ -167,5 +177,8 @@ var Stores = function () {
         stores: function () {
             storeslist();
         },
+        hours : function(){
+            managestorehours();
+        }        
     }
 }();

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\ManageCity;
 use App\Model\StoreSeller;
+use App\Model\StoreHours;
 
 class StoresController extends Controller {
 
@@ -187,6 +188,42 @@ class StoresController extends Controller {
         } else {
             return redirect('stores');
         }
+    }
+    
+    //storeshours
+    
+    public function storeHours(Request $request){
+        
+        if ($request->isMethod('post')) {
+           
+            $objHours = new StoreHours();
+            $result = $objHours->editstoreHours($request);
+            if ($result) {
+                $return['status'] = 'success';
+                $return['message'] = 'Store hours edit successfully.';
+                $return['redirect'] = route('manage-store-hours');
+            } else {
+                $return['status'] = 'error';
+                $return['message'] = 'something will be wrong.';
+            }
+            echo json_encode($return);
+            exit;
+        }
+        
+        $data['title'] = 'Wagler - Manage Store Hours';
+        $data['css'] = array();
+        $data['pluginjs'] = array('plugins/validate/jquery.validate.min.js');
+        $data['js'] = array('stores.js');
+        $data['funinit'] = array('Stores.hours()');
+        $data['header'] = array(
+            'title' => 'Manage Store Hours',
+            'breadcrumb' => array(
+                'Home' => route("admin-dashboard"),
+                'Manage Store Hours' => 'Manage Store Hours'));
+        
+        $objHours = new StoreHours();
+        $data['hours'] = $objHours->getRecords();
+        return view('backend.pages.stores.managehours', $data);
     }
 
 }
