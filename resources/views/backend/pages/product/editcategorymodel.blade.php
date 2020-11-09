@@ -29,8 +29,8 @@
     <div class="col-md-6">
         <div class="form-group">
             <label class="form-label">Product Size</label>
-            @for($i = 0 ; $i < 5 ; $i++)
-            <input type="text" class="form-control productprice" name="productsize[]" value="{{ (isset($viewproductSizePrize[$i]->productsize))?$viewproductSizePrize[$i]->productsize:'' }}" placeholder="Product Size {{ $i }}">
+            @for($i = 0 ; $i < 10 ; $i++)
+            <input type="text" class="form-control productprice" name="productsize[]" value="{{ (isset($viewproductSizePrize[$i]->productsize))?$viewproductSizePrize[$i]->productsize:'' }}" placeholder="Product Size {{ $i + 1 }}">
             @endfor
             
            
@@ -39,8 +39,8 @@
     <div class="col-md-6">
         <div class="form-group">
             <label class="form-label">Product Price</label>
-            @for($i = 0 ; $i < 5 ; $i++)
-                <input type="text" class="form-control productprice" name="productprice[]" value="{{ (isset($viewproductSizePrize[$i]->productprize))?$viewproductSizePrize[$i]->productprize:''  }}" placeholder="Product Price {{ $i }}">
+            @for($i = 0 ; $i < 10 ; $i++)
+                <input type="text" class="form-control productprice" name="productprice[]" value="{{ (isset($viewproductSizePrize[$i]->productprize))?$viewproductSizePrize[$i]->productprize:''  }}" placeholder="Product Price {{ $i + 1}}">
             @endfor
             
         </div>

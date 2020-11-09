@@ -48,7 +48,7 @@
                         <div class="product1 post7" style="margin: 10px">
                             <figure class="p-img"><img src="{{ url('public/images/product/'.$result->image) }}" alt="" /></figure>
                             <h1 class="p-head">{{ substr($result->name,0,17) }}</h1>
-                            <p class="p-info">{{ substr($result->description,0,17) }} {{ '$'.$result->price }}</p>
+                            <p class="p-info">{{ substr($result->description,0,17) }} </p>
                             <p class="click"><img src="{{ url('public/frontend/assets/images/small-leaf.png') }}" alt="" /><a href="{{ route('productdetails',$result->id) }}">Click Here for more</a></p>
                         </div>
                         @endforeach

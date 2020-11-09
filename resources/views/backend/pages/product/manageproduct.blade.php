@@ -208,6 +208,11 @@
                                 <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 3">
                                 <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 4">
                                 <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 5">
+                                <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 6">
+                                <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 7">
+                                <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 8">
+                                <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 9">
+                                <input type="text" class="form-control productprice" name="productsize[]"  placeholder="Product Size 10">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -218,6 +223,11 @@
                                 <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 3">
                                 <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 4">
                                 <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 5">
+                                <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 6">
+                                <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 7">
+                                <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 8">
+                                <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 9">
+                                <input type="text" class="form-control productprice" name="productprice[]"  placeholder="Product Price 10">
                             </div>
                         </div>
                         
